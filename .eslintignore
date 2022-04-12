@@ -1,0 +1,8 @@
+node_modules
+public
+coverage
+.eslintrc
+bin
+__mocks__
+__tests__
+path

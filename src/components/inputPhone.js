@@ -32,6 +32,10 @@ const HelperText = SC(FormHelperText)`
   margin-left: 0;
 `;
 
+const Label = SC(InputLabel)`
+  left: -14px !important;
+`;
+
 const Container = SC(FormControl)`
   margin-top: ${({withLabel}) => `${withLabel ? 14: 0}px`};
 `;
@@ -54,7 +58,7 @@ export const InputPhone = ({
   };
   return (
     <Container withLabel={Boolean(label)} focused={focused} {...formProps}>
-      {label && <InputLabel shrink>{label}</InputLabel>}
+      {label && <Label shrink>{label}</Label>}
       <Input
         type="tel"
         placeholder="+7 ___ ___-__-__"

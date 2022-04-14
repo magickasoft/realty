@@ -33,7 +33,7 @@ const HelperText = SC(FormHelperText)`
 `;
 
 const Label = SC(InputLabel)`
-  left: -14px;
+  left: -14px !important;
 `;
 
 const Container = SC(FormControl)`

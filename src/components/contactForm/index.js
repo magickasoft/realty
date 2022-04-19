@@ -18,7 +18,7 @@ export const ContactForm = props => {
   const handleSend = React.useCallback(async (phone = '') => {
     setLoading(true);
     try {
-      await contact({ phone });
+      await contact({phone});
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -31,21 +31,19 @@ export const ContactForm = props => {
     <Formik
       initialValues={{}}
       validationSchema={phoneSchema}
-      onSubmit={({ phone }) => {
+      onSubmit={({phone}) => {
         handleSend(phone);
       }}
       {...props}
     >
-      {({ handleSubmit, handleChange, handleBlur, isValid, dirty, touched, errors, values: { phone } }) => {
+      {({handleSubmit, handleChange, handleBlur, isValid, dirty, touched, errors, values: {phone}}) => {
         const toSend = () => {
           handleSend(phone);
         };
         return (
           <form onSubmit={handleSubmit}>
             <Box mb={3} mt={3}>
-              <Label>
-                Экскурсии по новостройкам
-              </Label>
+              <Label>Экскурсии по новостройкам</Label>
               <Box>
                 <InputPhone
                   label="Телефон"

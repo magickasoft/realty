@@ -26,7 +26,7 @@ function Home() {
         <ContactForm />
       </Page>
     </>
-  )
+  );
 }
 
 export default Home;

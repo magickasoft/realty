@@ -2,7 +2,7 @@ import SC from 'styled-components';
 import Link from 'next/link';
 import {Icon} from '../components/icon';
 import {Page} from '../components';
-import { maxDevice } from '../theme';
+import {maxDevice} from '../theme';
 
 const Header = SC.div`
   white-space: pre-line;
@@ -63,7 +63,10 @@ function NotFoundPage() {
         <Header>{`Этой страницы \nне существует`}</Header>
         <Text>
           Вы перешли по неверной ссылке, либо эта страница была удалена.&nbsp;
-          <Link href="/" passHref><ULink>Начните с главной страницы</ULink></Link>.
+          <Link href="/" passHref>
+            <ULink>Начните с главной страницы</ULink>
+          </Link>
+          .
         </Text>
       </div>
       <Img>

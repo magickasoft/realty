@@ -1,6 +1,6 @@
 import React from 'react';
 import SC from 'styled-components';
-import { maxDevice } from '../theme';
+import {maxDevice} from '../theme';
 
 const Container = SC.header`
   display: flex;
@@ -49,8 +49,8 @@ export const Page = ({label, text, children}) => {
     <>
       <Container>
         <LeftSide>
-          {label && (<Header>{label}</Header>)}
-          {text && (<Text>{text}</Text>)}
+          {label && <Header>{label}</Header>}
+          {text && <Text>{text}</Text>}
           {children}
         </LeftSide>
       </Container>

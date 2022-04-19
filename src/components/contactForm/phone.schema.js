@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { checkIsPhoneCodeCorrect } from './validations/phone';
+import { checkIsPhoneCodeCorrect } from '../../helpers/validations/phone';
 
 export const phoneSchema = Yup.object().shape({
   phone: Yup.string().nullable().required('Укажите телефон')

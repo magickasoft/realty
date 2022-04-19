@@ -56,7 +56,7 @@ const ULink = SC.a`
   color: #38B662;
 `;
 
-export default function NotFoundPage() {
+function NotFoundPage() {
   return (
     <Page>
       <div>
@@ -72,3 +72,5 @@ export default function NotFoundPage() {
     </Page>
   );
 }
+
+export default NotFoundPage;

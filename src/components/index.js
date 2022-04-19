@@ -1,2 +1,3 @@
-export * from './inputPhone';
-export * from './page';
+export {ContactForm} from './contactForm';
+export {InputPhone} from './inputPhone';
+export {Page} from './page';

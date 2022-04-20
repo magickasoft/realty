@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import {Page, ContactForm} from '../components';
+import {Page, ContactForm, ListOfBuildings} from '../components';
 
 function Home() {
   return (
@@ -25,6 +25,7 @@ function Home() {
       >
         <ContactForm />
       </Page>
+      <ListOfBuildings />
     </>
   );
 }

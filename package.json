@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "./node_modules/.bin/husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*.js\""
   },
   "dependencies": {
+    "@mui/icons-material": "^5.6.2",
     "@mui/material": "^5.6.1",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
     "axios": "^0.26.1",
@@ -26,9 +29,13 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/prompt-cli": "^16.2.3",
     "babel-plugin-styled-components": "^2.0.7",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
+    "husky": "^7.0.4",
     "prettier": "^2.6.2"
   },
   "resolutions": {

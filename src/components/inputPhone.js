@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMaskInput } from 'react-imask';
+import {IMaskInput} from 'react-imask';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
@@ -7,10 +7,10 @@ import FormHelperText from '@mui/material/FormHelperText';
 import SC from 'styled-components';
 
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
-  const { onChange, ...other } = props;
-  const handleAccept = (v) => {
+  const {onChange, ...other} = props;
+  const handleAccept = v => {
     const value = (v || '').replace(/ /g, '').replace(/-/g, '');
-    onChange({ target: { name: props.name, value } });
+    onChange({target: {name: props.name, value}});
   };
 
   return (
@@ -37,19 +37,10 @@ const Label = SC(InputLabel)`
 `;
 
 const Container = SC(FormControl)`
-  margin-top: ${({withLabel}) => `${withLabel ? 14: 0}px`};
+  margin-top: ${({withLabel}) => `${withLabel ? 14 : 0}px`};
 `;
 
-export const InputPhone = ({
-  label,
-  helperText,
-  focused,
-  disabled,
-  error,
-  required,
-  variant,
-  ...other
-}) => {
+export const InputPhone = ({label, helperText, focused, disabled, error, required, variant, ...other}) => {
   const formProps = {
     disabled,
     error,
@@ -59,13 +50,12 @@ export const InputPhone = ({
   return (
     <Container withLabel={Boolean(label)} focused={focused} {...formProps}>
       {label && <Label shrink>{label}</Label>}
-      <Input
-        type="tel"
-        placeholder="+7 ___ ___-__-__"
-        inputComponent={TextMaskCustom}
-        {...other}
-      />
-      {helperText && <HelperText id="helper-text" focused={focused}>{helperText}</HelperText>}
+      <Input type="tel" placeholder="+7 ___ ___-__-__" inputComponent={TextMaskCustom} {...other} />
+      {helperText && (
+        <HelperText id="helper-text" focused={focused}>
+          {helperText}
+        </HelperText>
+      )}
     </Container>
   );
 };

@@ -1,0 +1,17 @@
+name: ESLint
+on: [pull_request]
+jobs:
+  build:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: |
+          yarn
+
+      - name: Lint
+        run: |
+          yarn lint

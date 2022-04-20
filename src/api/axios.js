@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { isPlainObject, pick } from 'lodash';
+import {isPlainObject, pick} from 'lodash';
 
 const createAxiosInstance = (config = {}) => {
   const instance = axios.create({
     headers: {
       'Content-Type': 'application/json',
-      Accept: 'application/json'
+      Accept: 'application/json',
     },
     withCredentials: true,
     responseType: 'json',
@@ -16,20 +16,20 @@ const createAxiosInstance = (config = {}) => {
 
       return data;
     },
-    ...config
+    ...config,
   });
 
   instance.interceptors.response.use(
     response => response,
-    (err) => {
+    err => {
       if (!axios.isCancel(err)) {
         // ignore request canceling
         throw pick(err.response, ['data', 'status']);
       }
-    }
+    },
   );
 
   return instance;
 };
 
-export const API = createAxiosInstance({ baseURL: process.env.baseURL });
+export const API = createAxiosInstance({baseURL: process.env.baseURL});

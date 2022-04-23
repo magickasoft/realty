@@ -1,16 +1,10 @@
 import React from 'react';
-import SC from 'styled-components';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import {Formik} from 'formik';
 import {InputPhone} from '../inputPhone';
 import {contact} from '../../api';
 import {phoneSchema} from './phone.schema';
-
-const Label = SC.div`
-  font-size: 22px;
-  font-weight: 500;
-`;
 
 export const ContactForm = props => {
   const [loading, setLoading] = React.useState(false);
@@ -43,7 +37,6 @@ export const ContactForm = props => {
         return (
           <form onSubmit={handleSubmit}>
             <Box mb={3} mt={3}>
-              <Label>Экскурсии по новостройкам</Label>
               <Box>
                 <InputPhone
                   label="Телефон"

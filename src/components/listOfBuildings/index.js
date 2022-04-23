@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import {ObjectCard} from './objectСard';
 import {objects} from './data';
 import {maxDevice, minDevice, theme} from '../../theme';
+import {Label, Text} from '../common';
 
 const Container = SC(Grid)`
   padding: 20px 40px;
@@ -13,37 +14,6 @@ const Container = SC(Grid)`
   @media ${minDevice.laptopL} {
     max-width: 85%; 
     margin: 0 auto; 
-  }
-`;
-
-const Label = SC.div`
-  white-space: pre-line;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 1.23;
-  color: ${theme.colors.Black};
-  margin-bottom: 15px;
-  @media ${maxDevice.laptop} {
-    font-size: 32px;
-  }
-  @media ${maxDevice.laptop} {
-    font-size: 28px;
-  }
-`;
-
-const Text = SC.div`
-  white-space: pre-line;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 1.23;
-  color: #777777;
-  @media ${maxDevice.laptop} {
-    font-size: 20px;
-  }
-  @media ${maxDevice.laptop} {
-    font-size: 16px;
   }
 `;
 

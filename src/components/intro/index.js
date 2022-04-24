@@ -1,9 +1,10 @@
 import React from 'react';
 import SC from 'styled-components';
+import Button from '@mui/material/Button';
 import {Label, Text, Section} from '../common';
-import {ContactForm} from '../contactForm';
 import {maxDevice, minDevice, theme} from '../../theme';
 import {ListItem} from './listItem';
+import {ScrollLink} from '../scrollLink';
 import {list} from './data';
 
 const Container = SC.div`
@@ -19,7 +20,6 @@ const Layout = SC(Section)`
   align-items: flex-end;
   padding: 120px 140px 90px 140px;
   @media ${maxDevice.tablet} {
-    background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.1) 100%);
     align-items: flex-start;
     padding: 120px 30px 90px 30px;
   }
@@ -43,6 +43,10 @@ const List = SC.div`
   }
 `;
 
+const Btn = SC.div`
+  margin-top: 50px;
+`;
+
 export const Intro = props => (
   <Container>
     <Layout>
@@ -54,7 +58,13 @@ export const Intro = props => (
             Подберите себе квартиру на сайте, или оставьте заявку, чтоб получить больше вариантов
           </Text>
         </Content>
-        <ContactForm />
+        <Btn>
+          <ScrollLink to="contact" id="contact">
+            <Button variant="contained" size="large" color="primary">
+              Подобрать квартиру
+            </Button>
+          </ScrollLink>
+        </Btn>
         <List>
           {list.map((o, i) => (
             <ListItem key={i} {...o} />

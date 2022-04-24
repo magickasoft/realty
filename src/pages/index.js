@@ -1,8 +1,26 @@
 import React from 'react';
 import Head from 'next/head';
+import {Element, Events, scrollSpy} from 'react-scroll';
 import {ContactForm, ListOfBuildings, Page, Intro} from '../components';
 
 function Home() {
+  React.useEffect(() => {
+    Events.scrollEvent.register('begin', function (to, element) {
+      console.log('begin', to);
+    });
+
+    Events.scrollEvent.register('end', function (to, element) {
+      console.log('end', to);
+    });
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -18,11 +36,17 @@ function Home() {
         <meta name="description" content="app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Intro />
-      <ListOfBuildings />
-      <Page>
-        <ContactForm />
-      </Page>
+      <Element name="intro">
+        <Intro />
+      </Element>
+      <Element name="offers">
+        <ListOfBuildings />
+      </Element>
+      <Element name="contact">
+        <Page>
+          <ContactForm />
+        </Page>
+      </Element>
     </>
   );
 }

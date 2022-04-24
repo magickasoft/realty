@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import {Element, Events, scrollSpy} from 'react-scroll';
-import {ContactForm, ListOfBuildings, Page, Intro} from '../components';
+import {ContactForm, ListOfBuildings, Page, Intro, Banner} from '../components';
 
 function Home() {
   React.useEffect(() => {
@@ -44,6 +44,10 @@ function Home() {
       </Element>
       <Element name="contact">
         <Page>
+          <Banner
+            label="НЕ НАШЛИ ПОДХОДЯЩУЮ КВАРТИРУ?"
+            text="На сайте не весь каталог. Укажите параметры, мы подберем вам идеальную квартиру бесплатно!"
+          />
           <ContactForm />
         </Page>
       </Element>

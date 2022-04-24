@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import {ObjectCard} from './objectСard';
 import {objects} from './data';
 import {maxDevice, minDevice} from '../../theme';
-import {Label, Text} from '../common';
+import {Banner} from '../banner';
 
 const Container = SC(Grid)`
   padding: 20px 40px;
@@ -17,21 +17,12 @@ const Container = SC(Grid)`
   }
 `;
 
-const Content = SC.div`
-  text-align: center;
-  width: 80%;
-  margin: 20px auto;
-`;
-
 export const ListOfBuildings = props => {
   return (
     <Container>
-      <Content>
-        <Label>САМЫЕ ПОПУЛЯРНЫЕ ЖИЛЫЕ КОМПЛЕКСЫ НОВОСТРОЕК В НОВОСИБИРСКЕ</Label>
-        <Text>
-          В Новосибирске продается более <strong>24 000</strong> квартир в <strong>130</strong> жилых комплексах
-        </Text>
-      </Content>
+      <Banner label="САМЫЕ ПОПУЛЯРНЫЕ ЖИЛЫЕ КОМПЛЕКСЫ НОВОСТРОЕК В НОВОСИБИРСКЕ">
+        В Новосибирске продается более <strong>24 000</strong> квартир в <strong>130</strong> жилых комплексах
+      </Banner>
       <Grid container spacing={3}>
         {objects.map((o, i) => (
           <Grid key={o?.title || i} item xs={12} sm={6} md={4} lg={3} xl={3}>

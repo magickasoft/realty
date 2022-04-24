@@ -27,20 +27,13 @@ const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
   );
 });
 
-const HelperText = SC(FormHelperText)`
-  margin-right: 0;
-  margin-left: 0;
-`;
+const HelperText = SC(FormHelperText)``;
 
-const Label = SC(InputLabel)`
-  left: -14px !important;
-`;
+const Label = SC(InputLabel)``;
 
-const Container = SC(FormControl)`
-  margin-top: ${({withLabel}) => `${withLabel ? 14 : 0}px`};
-`;
+const Container = SC(FormControl)``;
 
-export const InputPhone = ({label, helperText, focused, disabled, error, required, variant, ...other}) => {
+export const InputPhone = ({label, helperText, focused, disabled, error, required, variant = 'standard', ...other}) => {
   const formProps = {
     disabled,
     error,
@@ -48,7 +41,7 @@ export const InputPhone = ({label, helperText, focused, disabled, error, require
     variant,
   };
   return (
-    <Container withLabel={Boolean(label)} focused={focused} {...formProps}>
+    <Container focused={focused} {...formProps}>
       {label && <Label shrink>{label}</Label>}
       <Input type="tel" placeholder="+7 ___ ___-__-__" inputComponent={TextMaskCustom} {...other} />
       {helperText && (

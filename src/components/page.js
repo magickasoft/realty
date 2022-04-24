@@ -16,7 +16,7 @@ const Container = SC.header`
   }
 `;
 
-const Header = SC.div`
+const Label = SC.div`
   white-space: pre-line;
   font-style: normal;
   font-weight: normal;
@@ -40,20 +40,16 @@ const Text = SC.div`
   color: #777777;
   max-width: 760px;
 `;
-const LeftSide = SC.div`
+const Content = SC.div`
   width: 100%;
 `;
 
-export const Page = ({label, text, children}) => {
-  return (
-    <>
-      <Container>
-        <LeftSide>
-          {label && <Header>{label}</Header>}
-          {text && <Text>{text}</Text>}
-          {children}
-        </LeftSide>
-      </Container>
-    </>
-  );
-};
+export const Page = ({label, text, children}) => (
+  <Container>
+    <Content>
+      {label && <Label>{label}</Label>}
+      {text && <Text>{text}</Text>}
+      {children}
+    </Content>
+  </Container>
+);

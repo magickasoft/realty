@@ -1,7 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import {Element, Events, scrollSpy} from 'react-scroll';
+import SC from 'styled-components';
 import {ContactForm, ListOfBuildings, Page, Intro, Banner} from '../components';
+
+const Form = SC.div`
+  text-align: center;
+`;
 
 function Home() {
   React.useEffect(() => {
@@ -46,9 +51,11 @@ function Home() {
         <Page>
           <Banner
             label="НЕ НАШЛИ ПОДХОДЯЩУЮ КВАРТИРУ?"
-            text="На сайте не весь каталог. Укажите параметры, мы подберем вам идеальную квартиру бесплатно!"
+            text="На сайте представлен не весь каталог. Укажите данные, мы подберем вам идеальную квартиру бесплатно!"
           />
-          <ContactForm />
+          <Form>
+            <ContactForm />
+          </Form>
         </Page>
       </Element>
     </>

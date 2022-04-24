@@ -53,7 +53,7 @@ export const Intro = props => (
       <div>
         <Content>
           <Label color={theme.colors.White}>КВАРТИРЫ В НОВОСТРОЙКАХ</Label>
-          <Label color={theme.colors.White}>Новосибирска от 5 млн.руб.</Label>
+          <Label color={theme.colors.White}>Новосибирска от 3 млн.руб.</Label>
           <Text color={theme.colors.White}>
             Подберите себе квартиру на сайте, или оставьте заявку, чтоб получить больше вариантов
           </Text>

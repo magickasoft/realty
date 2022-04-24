@@ -3,7 +3,7 @@ import SC from 'styled-components';
 import Grid from '@mui/material/Grid';
 import {ObjectCard} from './objectСard';
 import {objects} from './data';
-import {maxDevice, minDevice, theme} from '../../theme';
+import {maxDevice, minDevice} from '../../theme';
 import {Label, Text} from '../common';
 
 const Container = SC(Grid)`

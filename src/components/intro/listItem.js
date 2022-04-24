@@ -1,7 +1,7 @@
 import React from 'react';
 import SC from 'styled-components';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import {maxDevice, minDevice, theme} from '../theme';
+import {maxDevice, minDevice, theme} from '../../theme';
 
 const Container = SC.div`
   margin: 15px 0;
@@ -44,15 +44,13 @@ const Text = SC.div`
   color: ${theme.colors.White};
 `;
 
-export const LandingItem = ({label, text}) => {
-  return (
-    <Container>
-      {label && (
-        <Label>
-          <Check fontSize="small" /> {label}
-        </Label>
-      )}
-      {text && <Text>{text}</Text>}
-    </Container>
-  );
-};
+export const ListItem = ({label, text}) => (
+  <Container>
+    {label && (
+      <Label>
+        <Check fontSize="small" /> {label}
+      </Label>
+    )}
+    {text && <Text>{text}</Text>}
+  </Container>
+);

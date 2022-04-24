@@ -12,6 +12,7 @@ const Container = SC.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 `;
 const Layout = SC(Section)`
   background: rgb(0,0,0);

@@ -39,7 +39,7 @@ module.exports = (phase) => {
         },
         secure: true,
       },
-      receivers: "es.shmakov@gmail.com",
+      receivers: "es.shmakov@gmail.com, vsenovostroiki123@gmail.com",
     },
   }
 };

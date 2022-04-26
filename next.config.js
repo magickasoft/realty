@@ -5,13 +5,14 @@ const {
 } = require('next/constants');
 
 const defaultConfig = {
+  poweredByHeader: false,
   reactStrictMode: true,
   images: {
     disableStaticImages: true,
     minimumCacheTTL: 60,
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    domains: ['cdn.pixabay.com', 'media.istockphoto.com'],
+    domains: ['cdn.pixabay.com', 'media.istockphoto.com', 'realty-nsk.vercel.app'],
   },
 };
 

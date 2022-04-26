@@ -10,7 +10,7 @@ const Container = SC.header`
   top: 0;
   left: 0;
   right: 0;
-  background: #ffffff50;
+  background: ${({active}) => (active ? '#00000095' : '#00000030')};
   filter: drop-shadow(0px 0px 20px rgba(51, 62, 102, 0.1)) drop-shadow(0px 0px 40px rgba(51, 62, 102, 0.05));
 `;
 
@@ -56,22 +56,38 @@ const Row = SC.div`
   flex-direction: row;
 `;
 
-export const Header = props => (
-  <Container>
-    <Line1>
-      <Text color={theme.colors.White}>
-        <strong>НОВОСТРОЙКИ</strong> Новосибирска
-      </Text>
-      <Row>
-        <Label>
-          <Call fontSize="medium" />
-          <a href="tel://+79134594444">8(913) 459-44-44</a>
-        </Label>
-        <Label1>
-          <Call fontSize="medium" />
-          <a href="tel://+79137083318">8(913) 708-33-18</a>
-        </Label1>
-      </Row>
-    </Line1>
-  </Container>
-);
+export const Header = props => {
+  const [active, setActive] = React.useState(false);
+
+  React.useEffect(() => {
+    window?.addEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window?.scrollY >= 400) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+
+  return (
+    <Container active={active}>
+      <Line1>
+        <Text color={theme.colors.White}>
+          <strong>НОВОСТРОЙКИ</strong> Новосибирска
+        </Text>
+        <Row>
+          <Label>
+            <Call fontSize="medium" />
+            <a href="tel://+79134594444">8(913) 459-44-44</a>
+          </Label>
+          <Label1>
+            <Call fontSize="medium" />
+            <a href="tel://+79137083318">8(913) 708-33-18</a>
+          </Label1>
+        </Row>
+      </Line1>
+    </Container>
+  );
+};

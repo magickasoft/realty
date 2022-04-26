@@ -5,5 +5,6 @@ export {Banner} from './banner';
 export {Label, Text, Section} from './common';
 export {Header} from './header';
 export {InputPhone} from './inputPhone';
+export {ListItem} from './listItem';
 export {Page} from './page';
 export {Select} from './select';

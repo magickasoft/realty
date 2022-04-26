@@ -3,10 +3,45 @@ import Head from 'next/head';
 import {Element, Events, scrollSpy} from 'react-scroll';
 import SC from 'styled-components';
 import {ContactForm, ListOfBuildings, Page, Intro, Banner} from '../components';
+import {ListItem} from '../components';
+import {minDevice} from '../theme';
 
 const Form = SC.div`
   text-align: center;
 `;
+
+const List = SC.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  @media ${minDevice.laptopL} {
+    justify-content: center;
+  }
+`;
+
+const list = [
+  {
+    label: 'Покупка квартиры в Новостройке бесплатно',
+  },
+  {
+    label: 'Получение ипотеки со ставкой от 2%',
+  },
+  {
+    label: 'Дистанционное оформление сделки',
+  },
+  {
+    label: 'Возможность использования материнского капитала',
+  },
+  {
+    label: 'Продажа имеющегося жилья на выгодных условиях',
+  },
+  {
+    label: 'Оформление военной ипотеки',
+  },
+  {
+    label: 'Полное сопровождение на всех этапах сделки',
+  },
+];
 
 function Home() {
   React.useEffect(() => {
@@ -43,6 +78,16 @@ function Home() {
       </Head>
       <Element name="intro">
         <Intro />
+      </Element>
+      <Element name="worth">
+        <Page>
+          <Banner label="НАШИ ПРЕИМУЩЕСТВА" />
+          <List>
+            {list.map((o, i) => (
+              <ListItem key={i} {...o} />
+            ))}
+          </List>
+        </Page>
       </Element>
       <Element name="offers">
         <ListOfBuildings />

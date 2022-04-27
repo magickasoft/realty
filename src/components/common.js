@@ -35,6 +35,6 @@ export const Text = SC.div`
 
 export const Section = SC.section`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
 `;

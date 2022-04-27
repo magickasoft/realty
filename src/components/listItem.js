@@ -1,7 +1,7 @@
 import React from 'react';
 import SC from 'styled-components';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import {maxDevice, minDevice, theme} from '../../theme';
+import {maxDevice, minDevice, theme} from '../theme';
 
 const Container = SC.div`
   margin: 15px 0;

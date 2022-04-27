@@ -39,7 +39,7 @@ const Picture = SC.picture`
 `;
 
 const Img = SC(Image)`
-  filter: blur(2px);
+  // filter: blur(2px);
   transition: filter 500ms linear 0s;
   width: 100%;
   height: 100%;
@@ -79,7 +79,7 @@ const Container = SC.div`
     box-shadow: 0px 3px 15px rgb(0 0 0 / 50%);
   }
   &:hover ${Img} {
-    filter: blur(0px);
+    // filter: blur(0px);
   }
   &:hover ${Content} {
     background-image: linear-gradient(transparent 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.5) 90%,rgb(255,255,255) 90%);
@@ -108,7 +108,7 @@ export const ObjectCard = ({title, description, src, price}) => (
       <Content>
         <Layout>
           <Label>{title}</Label>
-          <Text>{description}</Text>
+          {description && <Text>{description}</Text>}
           {price && (
             <Price>
               {price} <CurrencyRubleIcon />

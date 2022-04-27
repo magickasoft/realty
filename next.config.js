@@ -12,7 +12,7 @@ const defaultConfig = {
     minimumCacheTTL: 60,
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    domains: ['cdn.pixabay.com', 'media.istockphoto.com', 'realty-nsk.vercel.app'],
+    domains: ['cdn.pixabay.com', 'media.istockphoto.com', 'novostroiki-54.ru'],
   },
 };
 
@@ -28,7 +28,7 @@ module.exports = (phase) => {
     ...defaultConfig,
     env: {
       baseURL: (() => {
-        if (isProd) return 'https://realty-nsk.vercel.app/api/';
+        if (isProd) return 'https://novostroiki-54.ru/api/';
         return 'http://localhost:3000/api/';
       })(),
       smtp: {

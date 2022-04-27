@@ -6,8 +6,8 @@ export default async function (req, res) {
     from: '"Customer support 👻" <support@gmail.com>',
     to: process.env.receivers,
     subject: 'Incoming request ✔',
-    text: `Call to client for details ${req.body.phone} ~${req.body.price} price`,
-    html: `<p>Call to client for details <b>${req.body.phone}</b> ~<b>${req.body.price}</b> price</p>`,
+    text: `Call to client for details ${req.body.phone}`,
+    html: `<p>Call to client for details <b>${req.body.phone}</b>`,
   };
 
   const info = await transporter.sendMail(message);

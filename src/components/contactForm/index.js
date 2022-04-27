@@ -5,6 +5,7 @@ import {Formik} from 'formik';
 import {InputPhone} from '../inputPhone';
 import {contact} from '../../api';
 import {phoneSchema} from './phone.schema';
+import {event} from '../../helpers/gtag';
 
 export const ContactForm = props => {
   const [loading, setLoading] = React.useState(false);
@@ -13,6 +14,7 @@ export const ContactForm = props => {
     setLoading(true);
     try {
       await contact({phone});
+      event({action: 'submit_form', category: 'contact_phone', label: phone});
       setLoading(false);
     } catch (error) {
       setLoading(false);

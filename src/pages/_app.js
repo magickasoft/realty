@@ -1,36 +1,40 @@
+import React from 'react';
 import Script from 'next/script';
 import {useRouter} from 'next/router';
-import React from 'react';
-import '../styles/globals.css';
 import {Header} from '../components';
-import {pageview} from '../helpers/ga';
+import {pageview, GA_MEASUREMENT_ID} from '../helpers/gtag';
+import '../styles/globals.css';
 
 function MyApp({Component, pageProps}) {
   const router = useRouter();
-
   React.useEffect(() => {
     const handleRouteChange = url => pageview(url);
     router.events.on('routeChangeComplete', handleRouteChange);
+    router.events.on('hashChangeComplete', handleRouteChange);
 
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off('hashChangeComplete', handleRouteChange);
     };
   }, [router.events]);
 
   return (
     <>
+      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.gaMeasurementId}`}
+        id="gtag-init"
         strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${process.env.gaMeasurementId}');
-        `}
-      </Script>
       <Header />
       <Component {...pageProps} />
     </>

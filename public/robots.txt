@@ -1,0 +1,16 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://novostroiki-54.ru/
+
+# Sitemaps
+Sitemap: https://realty-nsk.vercel.app/sitemap.xml
+Sitemap: http://realty-nsk.vercel.app/sitemap.xml
+
+Sitemap: https://novostroiki-54.ru/sitemap.xml
+Sitemap: http://novostroiki-54.ru/sitemap.xml
+
+Sitemap: https://www.novostroiki-54.ru/sitemap.xml
+Sitemap: http://www.novostroiki-54.ru/sitemap.xml

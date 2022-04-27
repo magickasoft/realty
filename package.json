@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "postinstall": "./node_modules/.bin/husky install",
-    "postbuild": "next-sitemap",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -38,7 +37,6 @@
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "husky": "^7.0.4",
-    "next-sitemap": "^2.5.20",
     "prettier": "^2.6.2"
   },
   "resolutions": {

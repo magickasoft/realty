@@ -3,7 +3,7 @@ import SC from 'styled-components';
 import Button from '@mui/material/Button';
 import {Label, Text, Section} from '../common';
 import {maxDevice, minDevice, theme} from '../../theme';
-import {ListItem} from './listItem';
+import {ListItem} from '../listItem';
 import {ScrollLink} from '../scrollLink';
 import {list} from './data';
 

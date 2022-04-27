@@ -30,6 +30,7 @@ function Home() {
     <>
       <Head>
         <title>App</title>
+        <meta name="google-site-verification" content="TZaq4O0W5T8D0npL-4SYDoVgvvVPLqiz2XvuL3_1pFQ" />
         <meta property="og:title" content="app" />
         <meta property="og:description" content="app" />
         <meta property="og:url" content="https://site.com/about" />

@@ -27,6 +27,7 @@ module.exports = (phase) => {
   return {
     ...defaultConfig,
     env: {
+      gaMeasurementId: 'G-CZ2JMN4FYD',
       baseURL: (() => {
         if (isProd) return 'https://novostroiki-54.ru/api/';
         return 'http://localhost:3000/api/';

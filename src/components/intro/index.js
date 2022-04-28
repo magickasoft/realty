@@ -61,9 +61,7 @@ export const Intro = props => (
         </Content>
         <Btn>
           <ScrollLink to="offers" id="offers">
-            <Button variant="contained" size="large" color="primary">
-              Подобрать квартиру
-            </Button>
+            <Button variant="contained">Подобрать квартиру</Button>
           </ScrollLink>
         </Btn>
         <List>

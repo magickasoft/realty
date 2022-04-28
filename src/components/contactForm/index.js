@@ -39,37 +39,33 @@ export const ContactForm = props => {
           handleSend(phone);
         };
         return (
-          <>
-            <form onSubmit={handleSubmit}>
-              <Box mb={3} mt={3}>
-                <Box>
-                  <InputPhone
-                    label="Телефон"
-                    name="phone"
-                    error={!!touched.phone && !!errors.phone}
-                    helperText={touched.phone ? errors.phone : undefined}
-                    value={phone}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    readOnly={false}
-                  />
-                </Box>
+          <form onSubmit={handleSubmit}>
+            <Box mb={3} mt={3}>
+              <Box>
+                <InputPhone
+                  label="Телефон"
+                  name="phone"
+                  error={!!touched.phone && !!errors.phone}
+                  helperText={touched.phone ? errors.phone : undefined}
+                  value={phone}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  readOnly={false}
+                />
               </Box>
-            </form>
+            </Box>
             <Box mb={3} mt={3}>
               <Box>
                 <Button
                   variant="contained"
-                  size="large"
-                  color="primary"
-                  disabled={!dirty || !isValid || loading}
+                  // disabled={!dirty || !isValid || loading}
                   onClick={toSend}
                 >
                   Отправить заявку
                 </Button>
               </Box>
             </Box>
-          </>
+          </form>
         );
       }}
     </Formik>

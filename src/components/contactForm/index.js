@@ -57,12 +57,11 @@ export const ContactForm = props => {
             <Box mb={3} mt={3}>
               <Box>
                 <Button
-                  disabled={!dirty || !isValid || loading}
-                  type="button"
-                  onClick={toSend}
                   variant="contained"
                   size="large"
                   color="primary"
+                  disabled={!dirty || !isValid || loading}
+                  onClick={toSend}
                 >
                   Отправить заявку
                 </Button>

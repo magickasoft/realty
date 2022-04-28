@@ -34,7 +34,7 @@ export const ContactForm = props => {
       }}
       {...props}
     >
-      {({handleSubmit, handleChange, handleBlur, isValid, dirty, touched, errors, values: {phone}}) => {
+      {({handleSubmit, handleChange, handleBlur, isValid, touched, errors, values: {phone}}) => {
         const toSend = () => {
           handleSend(phone);
         };
@@ -56,11 +56,7 @@ export const ContactForm = props => {
             </Box>
             <Box mb={3} mt={3}>
               <Box>
-                <Button
-                  variant="contained"
-                  // disabled={!dirty || !isValid || loading}
-                  onClick={toSend}
-                >
+                <Button variant="contained" disabled={!isValid || loading} onClick={toSend}>
                   Отправить заявку
                 </Button>
               </Box>

@@ -39,21 +39,23 @@ export const ContactForm = props => {
           handleSend(phone);
         };
         return (
-          <form onSubmit={handleSubmit}>
-            <Box mb={3} mt={3}>
-              <Box>
-                <InputPhone
-                  label="Телефон"
-                  name="phone"
-                  error={!!touched.phone && !!errors.phone}
-                  helperText={touched.phone ? errors.phone : undefined}
-                  value={phone}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  readOnly={false}
-                />
+          <>
+            <form onSubmit={handleSubmit}>
+              <Box mb={3} mt={3}>
+                <Box>
+                  <InputPhone
+                    label="Телефон"
+                    name="phone"
+                    error={!!touched.phone && !!errors.phone}
+                    helperText={touched.phone ? errors.phone : undefined}
+                    value={phone}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    readOnly={false}
+                  />
+                </Box>
               </Box>
-            </Box>
+            </form>
             <Box mb={3} mt={3}>
               <Box>
                 <Button
@@ -67,7 +69,7 @@ export const ContactForm = props => {
                 </Button>
               </Box>
             </Box>
-          </form>
+          </>
         );
       }}
     </Formik>

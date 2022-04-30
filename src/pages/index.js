@@ -103,7 +103,7 @@ function Home() {
           content="⭐ Новостройки Новосибирска по ценам от застройщиков! ➔ Без переплаты ✅ Бесплатно оформим ипотеку со сниженной ставкой. ➔ Все новостройки города. ☎️️ Звоните, отправляйте онлайн заявку."
         />
         <meta property="twitter:url" content="https://novostroiki-54.ru/" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://novostroiki-54.ru/favicon.ico" type="image/x-icon" />
       </Head>
       <Element name="intro">
         <Intro />

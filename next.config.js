@@ -5,6 +5,13 @@ const {
 } = require('next/constants');
 
 const defaultConfig = {
+  compiler: {
+    styledComponents: true,
+    removeConsole: {
+      exclude: ['error'],
+    },
+  },
+  swcMinify: true,
   poweredByHeader: false,
   reactStrictMode: true,
   images: {

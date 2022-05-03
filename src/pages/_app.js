@@ -3,9 +3,9 @@ import Script from 'next/script';
 import {useRouter} from 'next/router';
 import {Header} from '../components';
 import {pageview, GA_MEASUREMENT_ID} from '../helpers/gtag';
-import '../styles/globals.css';
+import {GlobalStyle} from '../theme';
 
-function MyApp({Component, pageProps}) {
+function App({Component, pageProps}) {
   const router = useRouter();
   React.useEffect(() => {
     const handleRouteChange = url => pageview(url);
@@ -35,10 +35,11 @@ function MyApp({Component, pageProps}) {
           `,
         }}
       />
+      <GlobalStyle />
       <Header />
       <Component {...pageProps} />
     </>
   );
 }
 
-export default MyApp;
+export default App;

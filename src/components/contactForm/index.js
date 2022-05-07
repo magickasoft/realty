@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import {Formik} from 'formik';
 import {InputPhone} from '../inputPhone';
 import {contact} from '../../api';
+import {Button} from '../button';
 import {phoneSchema} from './phone.schema';
 import {event} from '../../helpers/gtag';
 
@@ -56,7 +56,7 @@ export const ContactForm = props => {
             </Box>
             <Box mb={3} mt={3}>
               <Box>
-                <Button variant="contained" disabled={!dirty || !isValid || loading} onClick={toSend}>
+                <Button disabled={!dirty || !isValid || loading} onClick={toSend}>
                   Отправить заявку
                 </Button>
               </Box>

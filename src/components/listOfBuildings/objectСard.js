@@ -39,7 +39,6 @@ const Picture = SC.picture`
 `;
 
 const Img = SC(Image)`
-  // filter: blur(2px);
   transition: filter 500ms linear 0s;
   width: 100%;
   height: 100%;
@@ -70,24 +69,20 @@ const Container = SC.div`
   display: flex;
   transition: all 0.2s ease-in-out;
   width: 100%;
-  height: 465px;
+  height: 375px;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 12px;
   &:hover {
     position: relative;
     transform: translateY(-6px);
     box-shadow: 0px 3px 15px rgb(0 0 0 / 50%);
   }
-  &:hover ${Img} {
-    // filter: blur(0px);
-  }
   &:hover ${Content} {
     background-image: linear-gradient(transparent 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.5) 90%,rgb(255,255,255) 90%);
   }
-  Content
   @media ${minDevice.laptop} {
     max-width: 100%;
-    max-height: 465px;
+    max-height: 375px;
   }
 `;
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import SC from 'styled-components';
 import Grid from '@mui/material/Grid';
+import {Element} from 'react-scroll';
 import {ObjectCard} from './objectСard';
 import {objects} from './data';
 import {maxDevice, minDevice} from '../../theme';
@@ -17,8 +18,8 @@ const Container = SC(Grid)`
   }
 `;
 
-export const ListOfBuildings = props => {
-  return (
+export const ListOfBuildings = props => (
+  <Element name="offers">
     <Container>
       <Banner label="САМЫЕ ПОПУЛЯРНЫЕ ЖИЛЫЕ КОМПЛЕКСЫ НОВОСТРОЕК В НОВОСИБИРСКЕ">
         В Новосибирске продается более <strong>24 000</strong> квартир в <strong>130</strong> жилых комплексах
@@ -31,5 +32,5 @@ export const ListOfBuildings = props => {
         ))}
       </Grid>
     </Container>
-  );
-};
+  </Element>
+);

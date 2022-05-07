@@ -1,53 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import {Element, Events, scrollSpy} from 'react-scroll';
-import SC from 'styled-components';
-import {ContactForm, ListOfBuildings, Page, Intro, Banner} from '../components';
-import {ListItem} from '../components';
-import {minDevice} from '../theme';
-
-const Form = SC.div`
-  text-align: center;
-`;
-
-const List = SC.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  @media ${minDevice.laptopL} {
-    justify-content: center;
-  }
-`;
-
-const list = [
-  {
-    label: 'Покупка квартиры в Новостройке бесплатно',
-  },
-  {
-    label: 'Получение ипотеки со ставкой от 2%',
-  },
-  {
-    label: 'Дистанционное оформление сделки',
-  },
-  {
-    label: 'Возможность использования материнского капитала',
-  },
-  {
-    label: 'Продажа имеющегося жилья на выгодных условиях',
-  },
-  {
-    label: 'Оформление военной ипотеки',
-  },
-  {
-    label: 'Полное сопровождение на всех этапах сделки',
-  },
-  {
-    label: 'Семейная Ипотека 4,5%',
-  },
-  {
-    label: 'Трейд Ин ( Trade in)',
-  },
-];
+import {Events, scrollSpy} from 'react-scroll';
+import {ListOfBuildings, Intro, Worth, Contact} from '../components';
 
 function Home() {
   React.useEffect(() => {
@@ -112,33 +66,10 @@ function Home() {
         <meta property="twitter:url" content="https://novostroiki-54.ru/" />
         <link rel="icon" href="https://novostroiki-54.ru/favicon.ico" type="image/x-icon" />
       </Head>
-      <Element name="intro">
-        <Intro />
-      </Element>
-      <Element name="worth">
-        <Page>
-          <Banner label="НАШИ ПРЕИМУЩЕСТВА" />
-          <List>
-            {list.map((o, i) => (
-              <ListItem key={i} {...o} />
-            ))}
-          </List>
-        </Page>
-      </Element>
-      <Element name="offers">
-        <ListOfBuildings />
-      </Element>
-      <Element name="contact">
-        <Page>
-          <Banner
-            label="НЕ НАШЛИ ПОДХОДЯЩУЮ КВАРТИРУ?"
-            text="На сайте представлен не весь каталог. Оставьте заявку и мы подберем вам идеальную квартиру бесплатно!"
-          />
-          <Form>
-            <ContactForm />
-          </Form>
-        </Page>
-      </Element>
+      <Intro />
+      <Worth />
+      <ListOfBuildings />
+      <Contact />
     </>
   );
 }

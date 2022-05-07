@@ -1,8 +1,8 @@
 import React from 'react';
 import SC from 'styled-components';
-import WifiCalling3Icon from '@mui/icons-material/WifiCalling3';
+import {Icon} from './icon';
 import {Text} from './common';
-import {maxDevice, minDevice, theme} from '../theme';
+import {maxDevice, theme} from '../theme';
 
 const Container = SC.header`
   z-index: 9999;
@@ -10,8 +10,7 @@ const Container = SC.header`
   top: 0;
   left: 0;
   right: 0;
-  background: ${({active}) => (active ? '#00000095' : '#00000030')};
-  filter: drop-shadow(0px 0px 20px rgba(51, 62, 102, 0.1)) drop-shadow(0px 0px 40px rgba(51, 62, 102, 0.05));
+  background: ${({active}) => (active ? '#000000' : '#00000038')};
 `;
 
 const Line1 = SC.div`
@@ -28,24 +27,24 @@ const Line1 = SC.div`
   }
 `;
 
-const Call = SC(WifiCalling3Icon)`
-  margin-right: 5px;
+const SCIcon = SC(Icon)`
+  margin-right: 7px;
 `;
 
 const Label = SC.div`
   display: flex;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  color: #38B662;
+  color: #FFFFFF;
   align-items: center;
   @media ${maxDevice.tablet} {
     display: none
   }
 `;
 const Label1 = SC(Label)`
-  margin-left: 15px;
+  margin-left: 24px;
   @media ${maxDevice.laptop} {
     display: none
   }
@@ -79,11 +78,11 @@ export const Header = props => {
         </Text>
         <Row>
           <Label>
-            <Call fontSize="medium" />
+            <SCIcon name="call" size={20} />
             <a href="tel://+79134594444">8(913) 459-44-44</a>
           </Label>
           <Label1>
-            <Call fontSize="medium" />
+            <SCIcon name="call" size={20} />
             <a href="tel://+79137083318">8(913) 708-33-18</a>
           </Label1>
         </Row>

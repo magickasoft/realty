@@ -63,7 +63,7 @@ function NotFoundPage() {
         <Header>{`Этой страницы \nне существует`}</Header>
         <Text>
           Вы перешли по неверной ссылке, либо эта страница была удалена.&nbsp;
-          <Link href="/" passHref>
+          <Link rel="canonical" href="/" passHref>
             <ULink>Начните с главной страницы</ULink>
           </Link>
           .

@@ -97,7 +97,7 @@ export const ObjectCard = ({title, description, src, price}) => (
     <Wrapper>
       <Block>
         <Picture>
-          <Img src={src} layout="fill" />
+          <Img src={src} layout="fill" alt={title} />
         </Picture>
       </Block>
       <Content>

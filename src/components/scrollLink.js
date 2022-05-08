@@ -16,7 +16,7 @@ const defailtProps = {
 };
 
 export const ScrollLink = ({children, ...props}) => (
-  <RSLink {...defailtProps} {...props}>
+  <RSLink rel="canonical" {...defailtProps} {...props}>
     {children}
   </RSLink>
 );

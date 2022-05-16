@@ -6,6 +6,7 @@ import {Label, Text, Section} from '../common';
 import {maxDevice, minDevice, theme} from '../../theme';
 import {ScrollLink} from '../scrollLink';
 import {Button} from '../button';
+import {Icon} from '../icon';
 import {Item} from './item';
 import {list} from './data';
 
@@ -51,6 +52,25 @@ const Btn = SC.div`
   margin-top: 50px;
 `;
 
+const SCIcon = SC(Icon)`
+  margin-right: 7px;
+`;
+
+const PhoneBlock = SC.div`
+  margin: 10px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #FFFFFF;
+  align-items: center;
+  display: flex;
+`;
+
+const Block = SC.div`
+  margin-top: 20px;
+`;
+
 export const Intro = props => (
   <Element name="intro">
     <Container>
@@ -62,6 +82,16 @@ export const Intro = props => (
             <Text color={theme.colors.White}>
               Подберите себе квартиру на сайте, или оставьте заявку, чтоб получить больше вариантов
             </Text>
+            <Block>
+              <PhoneBlock>
+                <SCIcon name="call" size={20} />
+                <a href="tel://+79134594444">8(913) 459-44-44</a>
+              </PhoneBlock>
+              <PhoneBlock>
+                <SCIcon name="call" size={20} />
+                <a href="tel://+79137083318">8(913) 708-33-18</a>
+              </PhoneBlock>
+            </Block>
           </Content>
           <Btn>
             <ScrollLink to="offers" id="offers">

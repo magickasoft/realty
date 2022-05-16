@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@mui/icons-material": "^5.6.2",
-    "@mui/material": "^5.6.4",
+    "@mui/material": "^5.7.0",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
     "axios": "^0.27.2",
     "color": "^4.2.3",
@@ -30,9 +30,9 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
-    "@commitlint/prompt-cli": "^16.2.4",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/prompt-cli": "^17.0.0",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
     "husky": "^8.0.1",

@@ -1,7 +1,6 @@
 import React from 'react';
 import SC from 'styled-components';
 import Image from 'next/image';
-import CurrencyRubleIcon from '@mui/icons-material/CurrencyRuble';
 import {minDevice, theme} from '../../theme';
 
 const Wrapper = SC.div`
@@ -104,11 +103,7 @@ export const ObjectCard = ({title, description, src, price}) => (
         <Layout>
           <Label>{title}</Label>
           {description && <Text>{description}</Text>}
-          {price && (
-            <Price>
-              {price} <CurrencyRubleIcon />
-            </Price>
-          )}
+          {price && <Price>{price}</Price>}
         </Layout>
       </Content>
     </Wrapper>

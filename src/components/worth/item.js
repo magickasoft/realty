@@ -12,7 +12,6 @@ const Label = SC.div`
   color: ${theme.colors.Black};
   text-align: center;
   margin-top: 22px;
-  width: 95%;
 `;
 
 const Img = SC(Image)`

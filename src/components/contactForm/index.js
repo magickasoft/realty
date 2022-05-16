@@ -6,6 +6,7 @@ import {contact} from '../../api';
 import {Button} from '../button';
 import {phoneSchema} from './phone.schema';
 import {event} from '../../helpers/gtag';
+import {reachGoal} from '../../helpers/ym';
 
 export const ContactForm = props => {
   const [loading, setLoading] = React.useState(false);
@@ -15,6 +16,7 @@ export const ContactForm = props => {
     try {
       await contact({phone});
       event({action: 'submit_form', category: 'contact_phone', label: phone});
+      reachGoal('contact_phone');
       setLoading(false);
     } catch (error) {
       setLoading(false);

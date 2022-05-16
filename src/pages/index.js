@@ -20,7 +20,7 @@ function Home(props) {
       Events.scrollEvent.remove('end');
     };
   }, []);
-  console.log('props ---> ', props);
+
   return (
     <>
       <Head>

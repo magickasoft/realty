@@ -3,7 +3,7 @@ import Head from 'next/head';
 import {Events, scrollSpy} from 'react-scroll';
 import {ListOfBuildings, Intro, Worth, Contact} from '../components';
 
-function Home() {
+function Home(props) {
   React.useEffect(() => {
     Events.scrollEvent.register('begin', function (to, element) {
       console.log('begin', to);
@@ -20,7 +20,7 @@ function Home() {
       Events.scrollEvent.remove('end');
     };
   }, []);
-
+  console.log('props ---> ', props);
   return (
     <>
       <Head>

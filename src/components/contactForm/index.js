@@ -5,7 +5,7 @@ import {InputPhone} from '../inputPhone';
 import {contact} from '../../api';
 import {Button} from '../button';
 import {phoneSchema} from './phone.schema';
-import {event} from '../../helpers/gtag';
+// import {event} from '../../helpers/gtag';
 // import {reachGoal} from '../../helpers/ym';
 
 export const ContactForm = props => {
@@ -15,7 +15,7 @@ export const ContactForm = props => {
     setLoading(true);
     try {
       await contact({phone});
-      event({action: 'submit_form', category: 'contact_phone', label: phone});
+      // event({action: 'submit_form', category: 'contact_phone', label: phone});
       // reachGoal('contact_phone');
       setLoading(false);
     } catch (error) {

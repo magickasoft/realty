@@ -1,8 +1,9 @@
 import React from 'react';
 import Script from 'next/script';
-import {useRouter} from 'next/router';
+import Router, {useRouter} from 'next/router';
 import {Header} from '../components';
 import {pageview, GA_MEASUREMENT_ID} from '../helpers/gtag';
+import {withYM, YA_METRIKA_ID} from '../helpers/ym';
 import {GlobalStyle} from '../theme';
 
 function App({Component, pageProps}) {
@@ -42,4 +43,4 @@ function App({Component, pageProps}) {
   );
 }
 
-export default App;
+export default withYM(YA_METRIKA_ID, Router)(App);

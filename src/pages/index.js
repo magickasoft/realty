@@ -68,6 +68,7 @@ function Home(props) {
       </Head>
       <Intro />
       <Worth />
+      <Contact />
       <ListOfBuildings />
       <Contact />
     </>

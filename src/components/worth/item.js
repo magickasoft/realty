@@ -12,6 +12,7 @@ const Label = SC.div`
   color: ${theme.colors.Black};
   text-align: center;
   margin-top: 22px;
+  margin-bottom: 22px;
 `;
 
 const Img = SC(Image)`
@@ -24,24 +25,21 @@ const Container = SC.div`
   padding: 14px 14px;
   text-align: center;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 22px;
   @media ${maxDevice.mobileL} {
     margin: 12px 0;
     padding: 4px 12px;
   }
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0px 3px 15px rgb(0 0 0 / 50%);
-    background: ${theme.colors.Black};
+    box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.1);
  
   }
-  &:hover ${Label} {
-    color: ${theme.colors.White};
-  }
+  &:hover ${Label} {}
 `;
-export const Item = ({label, src, name, width, height}) => (
+export const Item = ({label, src, name, width, height, size = 232}) => (
   <Container>
-    {name && <Icon name={name} size={94} />}
+    {name && <Icon name={name} size={size} />}
     {src && <Img src={src} width={width} height={height} alt={label} />}
     {label && <Label>{label}</Label>}
   </Container>

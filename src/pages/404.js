@@ -1,8 +1,8 @@
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Link from 'next/link';
 import {Icon} from '../components/icon';
 import {Page} from '../components';
-import {maxDevice} from '../theme';
+import {maxDevice} from '../styles';
 
 const Header = SC.div`
   white-space: pre-line;

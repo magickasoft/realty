@@ -1,8 +1,8 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Grid from '@mui/material/Grid';
 import {Element} from 'react-scroll';
-import {maxDevice, minDevice, theme} from '../../theme';
+import {maxDevice, minDevice, theme} from '../../styles';
 import {list} from './data';
 import {Item} from './item';
 import {Label} from '../common';

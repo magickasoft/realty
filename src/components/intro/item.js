@@ -1,6 +1,6 @@
 import React from 'react';
-import SC from 'styled-components';
-import {maxDevice, theme} from '../../theme';
+import SC from '@emotion/styled';
+import {maxDevice, theme} from '../../styles';
 
 const Container = SC.div`
   margin: 14px 0;

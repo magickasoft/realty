@@ -1,9 +1,9 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Grid from '@mui/material/Grid';
 import {Element} from 'react-scroll';
 import {Label, Text, Section} from '../common';
-import {maxDevice, minDevice, theme} from '../../theme';
+import {maxDevice, minDevice, theme} from '../../styles';
 import {ScrollLink} from '../scrollLink';
 import {Button} from '../button';
 import {Icon} from '../icon';

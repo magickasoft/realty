@@ -1,8 +1,8 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Image from 'next/image';
 import {Icon} from '../icon';
-import {maxDevice, theme} from '../../theme';
+import {maxDevice, theme} from '../../styles';
 
 const Label = SC.div`
   font-style: normal;

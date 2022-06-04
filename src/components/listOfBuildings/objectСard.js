@@ -1,7 +1,7 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Image from 'next/image';
-import {minDevice, theme} from '../../theme';
+import {minDevice, theme} from '../../styles';
 
 const Wrapper = SC.div`
   width: 100%;

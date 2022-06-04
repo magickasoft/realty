@@ -67,9 +67,9 @@ function Home(props) {
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Intro />
-      <Worth />
+      {/*<Worth />*/}
       <Contact />
-      <ListOfBuildings />
+      {/*<ListOfBuildings />*/}
       <Contact />
     </>
   );

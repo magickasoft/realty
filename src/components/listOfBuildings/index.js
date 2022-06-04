@@ -1,10 +1,10 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Grid from '@mui/material/Grid';
 import {Element} from 'react-scroll';
 import {ObjectCard} from './objectСard';
 import {objects} from './data';
-import {maxDevice, minDevice, theme} from '../../theme';
+import {maxDevice, minDevice, theme} from '../../styles';
 import {Label, Text} from '../common';
 
 const Container = SC(Grid)`

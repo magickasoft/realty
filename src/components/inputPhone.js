@@ -4,7 +4,7 @@ import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
   const {onChange, ...other} = props;

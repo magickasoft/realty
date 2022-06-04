@@ -64,7 +64,7 @@ function Home(props) {
         />
         <meta name="twitter:card" content="summary" />
         <meta property="twitter:url" content="https://novostroiki-54.ru/" />
-        <link rel="icon" href="https://novostroiki-54.ru/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
       <Intro />
       <Worth />

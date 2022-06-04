@@ -76,9 +76,6 @@ const Container = SC.div`
     transform: translateY(-6px);
     box-shadow: 0px 3px 15px rgb(0 0 0 / 50%);
   }
-  &:hover ${Content} {
-    background-image: linear-gradient(transparent 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.5) 90%,rgb(255,255,255) 90%);
-  }
   @media ${minDevice.laptop} {
     max-width: 100%;
     max-height: 375px;

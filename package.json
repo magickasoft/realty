@@ -11,9 +11,12 @@
     "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*.js\""
   },
   "dependencies": {
-    "@mui/icons-material": "^5.8.0",
-    "@mui/material": "^5.8.1",
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.9.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.2",
+    "@mui/material": "^5.8.2",
     "axios": "^0.27.2",
     "color": "^4.2.3",
     "formik": "^2.2.9",
@@ -27,7 +30,6 @@
     "react-imask": "^6.4.2",
     "react-scroll": "^1.8.7",
     "remove": "^0.1.5",
-    "styled-components": "^5.3.5",
     "yup": "^0.32.11"
   },
   "devDependencies": {
@@ -38,8 +40,5 @@
     "eslint-config-next": "12.1.6",
     "husky": "^8.0.1",
     "prettier": "^2.6.2"
-  },
-  "resolutions": {
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
   }
 }

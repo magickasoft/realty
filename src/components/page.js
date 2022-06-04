@@ -1,6 +1,6 @@
 import React from 'react';
-import SC from 'styled-components';
-import {maxDevice} from '../theme';
+import SC from '@emotion/styled';
+import {maxDevice} from '../styles';
 
 const Container = SC.header`
   display: flex;

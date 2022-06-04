@@ -1,5 +1,5 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import {Link} from 'react-scroll';
 
 const RSLink = SC(Link)`

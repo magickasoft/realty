@@ -1,7 +1,7 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Image from 'next/image';
-import {minDevice, theme} from '../../theme';
+import {minDevice, theme} from '../../styles';
 
 const Wrapper = SC.div`
   width: 100%;
@@ -75,9 +75,6 @@ const Container = SC.div`
     position: relative;
     transform: translateY(-6px);
     box-shadow: 0px 3px 15px rgb(0 0 0 / 50%);
-  }
-  &:hover ${Content} {
-    background-image: linear-gradient(transparent 0%,rgba(255,255,255,0.25) 25%,rgba(255,255,255,0.5) 90%,rgb(255,255,255) 90%);
   }
   @media ${minDevice.laptop} {
     max-width: 100%;

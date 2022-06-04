@@ -1,6 +1,7 @@
 import React from 'react';
-import SC, {css} from 'styled-components';
-import {theme} from '../theme';
+import SC from '@emotion/styled';
+import {css} from '@emotion/react';
+import {theme} from '../styles';
 
 const Container = SC.button`
   background: linear-gradient(270deg, #00B981 -248.32%, #0496B6 100%);

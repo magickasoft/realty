@@ -1,8 +1,8 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import {Icon} from './icon';
 import {Text} from './common';
-import {maxDevice, theme} from '../theme';
+import {maxDevice, theme} from '../styles';
 
 const Container = SC.header`
   z-index: 9999;

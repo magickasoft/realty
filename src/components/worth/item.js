@@ -1,8 +1,8 @@
 import React from 'react';
-import SC from 'styled-components';
+import SC from '@emotion/styled';
 import Image from 'next/image';
 import {Icon} from '../icon';
-import {maxDevice, theme} from '../../theme';
+import {maxDevice, theme} from '../../styles';
 
 const Label = SC.div`
   font-style: normal;
@@ -35,7 +35,6 @@ const Container = SC.div`
     box-shadow: 0px 14px 40px rgba(0, 0, 0, 0.1);
  
   }
-  &:hover ${Label} {}
 `;
 export const Item = ({label, src, name, width, height, size = 232}) => (
   <Container>

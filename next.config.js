@@ -36,10 +36,6 @@ module.exports = (phase) => {
     env: {
       gaMeasurementId: 'G-CZ2JMN4FYD',
       yaMetrikaId: '88802971',
-      baseURL: (() => {
-        if (isProd) return 'https://novostroiki-54.ru/api/';
-        return 'http://localhost:3000/api/';
-      })(),
       smtp: {
         port: 465,
         host: "smtp.gmail.com",

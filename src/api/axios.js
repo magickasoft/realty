@@ -32,4 +32,4 @@ const createAxiosInstance = (config = {}) => {
   return instance;
 };
 
-export const API = createAxiosInstance({baseURL: process.env.baseURL});
+export const API = createAxiosInstance({baseURL: process.env.baseURL || '/api/'});

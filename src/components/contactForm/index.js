@@ -15,8 +15,8 @@ export const ContactForm = props => {
     setLoading(true);
     try {
       await contact({phone});
-      event({action: 'submit_form', category: 'contact_phone', label: phone});
-      reachGoal('contact_phone');
+      // event({action: 'submit_form', category: 'contact_phone', label: phone});
+      // reachGoal('contact_phone');
       setLoading(false);
     } catch (error) {
       setLoading(false);

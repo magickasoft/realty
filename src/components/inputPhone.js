@@ -16,7 +16,8 @@ const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
   return (
     <IMaskInput
       {...other}
-      mask="+{7} 000 000-00-00"
+      // mask="+{7} 000 000-00-00"
+      mask="+00000000000[0]"
       definitions={{
         '#': /[1-9]/,
       }}
@@ -43,7 +44,8 @@ export const InputPhone = ({label, helperText, focused, disabled, error, require
   return (
     <Container focused={focused} {...formProps}>
       {label && <Label shrink>{label}</Label>}
-      <Input type="tel" placeholder="+7 ___ ___-__-__" inputComponent={TextMaskCustom} {...other} />
+      {/*<Input type="tel" placeholder="+7 ___ ___-__-__" inputComponent={TextMaskCustom} {...other} />*/}
+      <Input type="tel" inputComponent={TextMaskCustom} {...other} />
       {helperText && (
         <HelperText id="helper-text" focused={focused}>
           {helperText}

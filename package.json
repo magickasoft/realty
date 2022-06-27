@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
-    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.3",
     "@commitlint/prompt-cli": "^17.0.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",

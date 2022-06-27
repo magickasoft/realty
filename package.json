@@ -11,7 +11,7 @@
     "prettier": "./node_modules/.bin/prettier --write \"{src,__{tests,mocks}__}/**/*.js\""
   },
   "dependencies": {
-    "@emotion/cache": "^11.7.1",
+    "@emotion/cache": "^11.9.3",
     "@emotion/react": "^11.9.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.8.1",
@@ -36,7 +36,7 @@
     "@commitlint/cli": "^17.0.1",
     "@commitlint/config-conventional": "^17.0.0",
     "@commitlint/prompt-cli": "^17.0.0",
-    "eslint": "8.16.0",
+    "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
     "husky": "^8.0.1",
     "prettier": "^2.6.2"

@@ -36,16 +36,6 @@ module.exports = (phase) => {
     env: {
       gaMeasurementId: 'G-CZ2JMN4FYD',
       yaMetrikaId: '88802971',
-      smtp: {
-        port: 465,
-        host: "smtp.gmail.com",
-        auth: {
-          user: 'magickasoft@gmail.com',
-          pass: 'magickasoft1583210910',
-        },
-        secure: true,
-      },
-      receivers: "es.shmakov@gmail.com, vsenovostroiki123@gmail.com",
     },
   }
 };

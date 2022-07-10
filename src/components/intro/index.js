@@ -56,6 +56,12 @@ const SCIcon = SC(Icon)`
   margin-right: 7px;
 `;
 
+const SCIconLeft = SC(Icon)`
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 15px;
+`;
+
 const PhoneBlock = SC.div`
   margin: 10px 0;
   font-style: normal;
@@ -86,10 +92,22 @@ export const Intro = props => (
               <PhoneBlock>
                 <SCIcon name="call" size={20} />
                 <a href="tel://+79134594444">8(913) 459-44-44</a>
+                {/*<a href="https://t.me/mastergvs">*/}
+                {/*  <SCIconLeft name="telegram" size={32} />*/}
+                {/*</a>*/}
+                <a href="https://wa.me/79134594444">
+                  <SCIconLeft name="whatsApp" size={32} />
+                </a>
               </PhoneBlock>
               <PhoneBlock>
                 <SCIcon name="call" size={20} />
                 <a href="tel://+79137083318">8(913) 708-33-18</a>
+                {/*<a href="https://t.me/mastergvs">*/}
+                {/*  <SCIconLeft name="telegram" size={32} />*/}
+                {/*</a>*/}
+                <a href="https://wa.me/79137083318">
+                  <SCIconLeft name="whatsApp" size={32} />
+                </a>
               </PhoneBlock>
             </Block>
           </Content>

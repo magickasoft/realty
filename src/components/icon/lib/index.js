@@ -9,6 +9,8 @@ import {percent} from './percent';
 import {safety} from './safety';
 import {tradeIn} from './tradeIn';
 import {voenIpot} from './voenIpot';
+import {whatsApp} from './whatsApp';
+import {telegram} from './telegram';
 
 export default {
   notFound,
@@ -22,4 +24,6 @@ export default {
   safety,
   tradeIn,
   voenIpot,
+  whatsApp,
+  telegram,
 };

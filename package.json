@@ -36,7 +36,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@commitlint/prompt-cli": "^17.0.3",
-    "eslint": "8.19.0",
+    "eslint": "8.21.0",
     "eslint-config-next": "12.2.2",
     "husky": "^8.0.1",
     "prettier": "^2.7.1"
